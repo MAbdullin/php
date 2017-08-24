@@ -1,3 +1,24 @@
+
+<?php
+//echo "Обработчик формы";
+//var_dump($_REQUEST);
+$message =false;
+$error =false;
+if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
+{   $type = $_REQUEST["type"];
+    $Persona = $_REQUEST["Persona"];
+    if( empty($type)  or empty($Persona)) {
+    } else{
+        $row = 'Здравствуйте,' . $type .
+            '  Ваш номер:' . $Persona. PHP_EOL;
+        file_put_contents('./step.txt',
+            $row, FILE_APPEND);
+        $message ='Спасибо, Мы с Вами свяжемся';
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -79,8 +100,8 @@
     <div class="splash" style="background-position: 0px 0px;">
       <div class="container">
 
-            <h1>[Название партии/сессии/игры]</h1>
-   <p>[Описание партии/сессии/игры]Totam rem aperiam eaque ipsa, quae ab illo inventore. Dolorum fuga deleniti atque corrupti, quos dolores et accusamus.</p>
+            <h1>Третья англо-голландская война</h1>
+   <p>Начало войны Франции и Англии против Голландии, Испании и Бранденбурга.</p>
 
 
       </div>
@@ -108,11 +129,14 @@
         <!-- Начало Раздела 1 -->
         <div class="container">
             <p>Блок 1 - Общие сведения</p>
-                <form class="form-horizontal">
+            <?php if ($message ) : ?>
+                <?= $message?>
+            <?php else: ?>
+                <form class="form-horizontal" role="form">
                     <div class="form-group">
                         <label class="control-label col-xs-2">Форма правления</label>
                         <div class="col-xs-2">
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" name="type">
                                 <option>Абсолютная монархия</option>
                                 <option>Республика</option>
                             </select>
@@ -287,7 +311,7 @@
                     <div class="form-group">
                         <label class="control-label col-xs-2">Доступен новый персонаж</label>
                         <div class="col-xs-2">
-                            <select class="form-control input-sm">
+                            <select class="form-control input-sm" name="Persona">
                                 <option>не выбран</option>
                                 <option>аристократ граф фон Турун Тути Туту</option>
                             </select>
@@ -534,6 +558,7 @@
                     <!-- Кнопка Конец -->
                     
                 </form>
+            <?php endif; ?>
         </div>
 
         <!-- Конец Раздела 1 -->
