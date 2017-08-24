@@ -4,16 +4,27 @@
 //var_dump($_REQUEST);
 $message =false;
 $error =false;
-if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
+if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']) and isset($_REQUEST['options1'])and isset($_REQUEST['options2'])and isset($_REQUEST['options3'])and isset($_REQUEST['options4'])and isset($_REQUEST['options5'])and isset($_REQUEST['options6']))
 {   $type = $_REQUEST["type"];
     $Persona = $_REQUEST["Persona"];
+    $options1 = $_REQUEST["options1"];
+    $options2 = $_REQUEST["options2"];
+    $options3 = $_REQUEST["options3"];
+    $options4 = $_REQUEST["options4"];
+    $options5 = $_REQUEST["options5"];
+    $options6 = $_REQUEST["options6"];
     if( empty($type)  or empty($Persona)) {
     } else{
-        $row = 'Здравствуйте,' . $type .
-            '  Ваш номер:' . $Persona. PHP_EOL;
+        $row = 'Форма правления: ' . $type .
+            '; Изоляция-Экспансия: ' . $options1.
+            '; Традиции-Инновации: ' . $options2.
+            '; Церковь-Знать: ' . $options3.
+            '; Неравенство-Свобода: ' . $options4.
+            '; Централизация: ' . $options5.
+            '; Милитаризация: ' . $options6. PHP_EOL;
         file_put_contents('./step.txt',
             $row, FILE_APPEND);
-        $message ='Спасибо, Мы с Вами свяжемся';
+        $message ='Ход завершен';
     }
 }
 ?>
@@ -323,19 +334,19 @@ if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
                         <div class="col-xs-3">                            
                             <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option1">1
+                                <input type="radio" name="options1" id="option1" value="1">1
                             </label>
                             <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option2">2
+                                <input type="radio" name="options1" id="option2" value="2">2
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option3">3
+                                <input type="radio" name="options1" id="option3" value="3">3
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">4
+                                <input type="radio" name="options1" id="option4" value="4">4
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">5
+                                <input type="radio" name="options1" id="option5" value="5">5
                             </label>
                             </div>                            
                         </div>
@@ -345,19 +356,19 @@ if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
                         <div class="col-xs-3">                            
                             <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">1
+                                <input type="radio" name="options2" id="option1" value="1">1
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option2">2
+                                <input type="radio" name="options2" id="option2" value="2">2
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option3">3
+                                <input type="radio" name="options2" id="option3" value="3">3
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option1">4
+                                <input type="radio" name="options2" id="option1" value="4">4
                             </label>
                             <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option1">5
+                                <input type="radio" name="options2" id="option1" value="5">5
                             </label>
                             </div>                            
                         </div>
@@ -367,19 +378,19 @@ if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
                         <div class="col-xs-3">                            
                             <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option1">1
+                                <input type="radio" name="options3" id="option1" value="1">1
                             </label>
                             <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option2">2
+                                <input type="radio" name="options3" id="option2" value="2">2
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option3">3
+                                <input type="radio" name="options3" id="option3" value="3">3
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">4
+                                <input type="radio" name="options3" id="option1" value="4">4
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">5
+                                <input type="radio" name="options3" id="option1" value="5">5
                             </label>
                             </div>                            
                         </div>
@@ -389,19 +400,19 @@ if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
                         <div class="col-xs-3">                             
                             <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option1">1
+                                <input type="radio" name="options4" id="option1" value="1">1
                             </label>
                             <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option2">2
+                                <input type="radio" name="options4" id="option2" value="2">2
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option3">3
+                                <input type="radio" name="options4" id="option3" value="3">3
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">4
+                                <input type="radio" name="options4" id="option1" value="4">4
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">5
+                                <input type="radio" name="options4" id="option1" value="5">5
                             </label>
                             </div>                            
                         </div>
@@ -411,19 +422,19 @@ if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
                         <div class="col-xs-3">                            
                             <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option1">1
+                                <input type="radio" name="options5" id="option1" value="1">1
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option2">2
+                                <input type="radio" name="options5" id="option2" value="2">2
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option3">3
+                                <input type="radio" name="options5" id="option3" value="3">3
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">4
+                                <input type="radio" name="options5" id="option1" value="4">4
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">5
+                                <input type="radio" name="options5" id="option1" value="5">5
                             </label>
                             </div>                            
                         </div>
@@ -433,19 +444,19 @@ if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']))
                         <div class="col-xs-3">                            
                             <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">1
+                                <input type="radio" name="options6" id="option1" value="1">1
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option2">2
+                                <input type="radio" name="options6" id="option2" value="2">2
                             </label>
                             <label class="btn btn-default active">
-                                <input type="radio" name="options" id="option3">3
+                                <input type="radio" name="options6" id="option3" value="3">3
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="option1">4
+                                <input type="radio" name="options6" id="option1" value="4">4
                             </label>
                             <label class="btn btn-link disabled">
-                                <input type="radio" name="options" id="option1">5
+                                <input type="radio" name="options6" id="option1" value="5">5
                             </label>
                             </div>                            
                         </div>
