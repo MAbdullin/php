@@ -1,583 +1,179 @@
-
-<?php
-//echo "Обработчик формы";
-//var_dump($_REQUEST);
-$message =false;
-$error =false;
-if (isset( $_REQUEST['type']) and isset($_REQUEST['Persona']) and isset($_REQUEST['options1'])and isset($_REQUEST['options2'])and isset($_REQUEST['options3'])and isset($_REQUEST['options4'])and isset($_REQUEST['options5'])and isset($_REQUEST['options6']))
-{   $type = $_REQUEST["type"];
-    $Persona = $_REQUEST["Persona"];
-    $options1 = $_REQUEST["options1"];
-    $options2 = $_REQUEST["options2"];
-    $options3 = $_REQUEST["options3"];
-    $options4 = $_REQUEST["options4"];
-    $options5 = $_REQUEST["options5"];
-    $options6 = $_REQUEST["options6"];
-    if( empty($type)  or empty($Persona)) {
-    } else{
-        $row = 'Форма правления: ' . $type .
-            '; Изоляция-Экспансия: ' . $options1.
-            '; Традиции-Инновации: ' . $options2.
-            '; Церковь-Знать: ' . $options3.
-            '; Неравенство-Свобода: ' . $options4.
-            '; Централизация: ' . $options5.
-            '; Милитаризация: ' . $options6. PHP_EOL;
-        file_put_contents('./step.txt',
-            $row, FILE_APPEND);
-        $message ='Ход завершен';
-    }
-}
-?>
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    
-    <script src="js/mynavbar.js"></script>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-
-
-    <!-- Навигационное меню -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Название сайта</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbar-main">
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="#">Пункт 1 <span class="sr-only">(current)</span></a>
-                </li>
-                <li>
-                  <a href="#">Пункт 2</a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Пункт с подпунктами 1<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Подпункт 1.1</a></li>
-                    <li><a href="#">Подпункт 1.2</a></li>
-                    <li><a href="#">Подпункт 1.3</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Подпункт 1.4</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Подпункт 1.5</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Поиск">
-                </div>
-                <button type="submit" class="btn btn-default">Найти</button>
-              </form>
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Пункт 3</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      
-
-    <!-- Заставка -->
-    <div class="splash" style="background-position: 0px 0px;">
-      <div class="container">
-
-            <h1>Третья англо-голландская война</h1>
-   <p>Начало войны Франции и Англии против Голландии, Испании и Бранденбурга.</p>
-
-
-      </div>
-    </div>  
-      
-      
+</head>
+<body>
+<div class="form-group">
     <div class="container">
-        <!-- Начало Блока Инфо -->
-        <div class="container">
-            
-            
-            <div class="row">
-                <div class="col-sm-2">
-                    <img src="img\flag.png" alt="..." class="img-thumbnail">
-                </div>
-                <div class="col-sm-4">
-                    <p>Австрия 11 ход 1672 год</p>
-                    <p>Империя</p>
-                </div>
-             </div>
-
+    <h2>Регистрация</h2>
+    </div>
+</div>
+<form action="index.php" method="post" class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="lastName">Имя в игре:</label>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="lastName" placeholder="Придумайте ник" name="username" required>
         </div>
-        <!-- Конец Блока Инфо -->
-        <hr>
-        <!-- Начало Раздела 1 -->
-        <div class="container">
-            <p>Блок 1 - Общие сведения</p>
-            <?php if ($message ) : ?>
-                <?= $message?>
-            <?php else: ?>
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Форма правления</label>
-                        <div class="col-xs-2">
-                            <select class="form-control input-sm" name="type">
-                                <option>Абсолютная монархия</option>
-                                <option>Республика</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Размер страны</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">13.5</p>                            
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Религия</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">Католики</p>                            
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Культурная группа</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">Германцы</p>                            
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Нац. культура 1</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">Немцы</p>                            
-                        </div>
-                    </div>
-                    
-
-                    
-                    
-                    
-                    <!-- АККАРДЕОН-1 -->               
-                    <div class="panel-group" id="accordion">
-                        <!-- 1 панель -->
-                            <div class="panel panel-default">
-                        <!-- Заголовок 1 панели -->
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Правители (спойлер)</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse">
-                          <!-- Содержимое 1 панели -->
-                                    <div class="panel-body">
-                                        <table class="table table-condensed">
-                                            <thead>
-                                                <tr>
-                                                    <th>Титул</th>
-                                                    <th>Имя</th>
-                                                    <th>Характеристики</th>
-                                                    <th>Возраст</th>
-                                                    <th>Статус</th>
-                                                    <th>Особенности</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Император</td>
-                                                    <td>Леопольд</td>
-                                                    <td>2А 4Е</td>
-                                                    <td>65</td>
-                                                    <td>Женат</td>
-                                                    <td>Может стать Генералом</td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Жена императора</td>
-                                                    <td>Эльза</td>
-                                                    <td>2М</td>
-                                                    <td>18</td>
-                                                    <td>Замужем</td>
-                                                    <td>Может стать Жрицей</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>                                        
-                                    
-                                    </div>
-                                </div>
-                        </div>
-
-                        <!-- 2 панель -->
-                            <div class="panel panel-default">
-                        <!-- Заголовок 2 панели -->
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Великие люди (спойлер)</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse">
-                          <!-- Содержимое 2 панели -->
-                                    <div class="panel-body">
-                                        <table class="table table-condensed">
-                                            <thead>
-                                                <tr>
-                                                    <th>Великий человек</th>
-                                                    <th>Характеристики</th>
-                                                    <th>Возраст</th>
-                                                    <th>Статус</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Аристократ граф фон Кауниц</td>
-                                                    <td>2А</td>
-                                                    <td>71</td>
-                                                    <td>Верен</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>                                        
-                                    
-                                    </div>
-                                </div>
-                        </div>
-                        
-                         <!-- 3 панель -->
-                            <div class="panel panel-default">
-                        <!-- Заголовок 3 панели -->
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Справка по Великим людям (спойлер)</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseThree" class="panel-collapse collapse">
-                          <!-- Содержимое 3 панели -->
-                                    <div class="panel-body">
-                                        <table class="table table-condensed">
-                                            <thead>
-                                                <tr>
-                                                    <th>Великий человек</th>
-                                                    <th>Имя</th>
-                                                    <th>Характеристики</th>
-                                                    <th>Способность</th>
-                                                    <th>Эффект</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Министр</td>
-                                                    <td>Иван</td>
-                                                    <td>2А</td>
-                                                    <td>рост эфф-ти управления</td>
-                                                    <td>7%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Казначей</td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td>снижение инфляции</td>
-                                                    <td></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>                                        
-                                    
-                                    </div>
-                                </div>
-                        </div>
-                        
-                    </div>
-                    <!-- АККАРДЕОН-1 КОНЕЦ-->
-                    
-                    
-
-                    
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Доступен новый персонаж</label>
-                        <div class="col-xs-2">
-                            <select class="form-control input-sm" name="Persona">
-                                <option>не выбран</option>
-                                <option>аристократ граф фон Турун Тути Туту</option>
-                            </select>
-                        </div>
-                    </div>                   
-                    
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Изоляция-Экспансия</label>
-                        <div class="col-xs-3">                            
-                            <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default">
-                                <input type="radio" name="options1" id="option1" value="1">1
-                            </label>
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options1" id="option2" value="2">2
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options1" id="option3" value="3">3
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options1" id="option4" value="4">4
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options1" id="option5" value="5">5
-                            </label>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Традиции-Инновации</label>
-                        <div class="col-xs-3">                            
-                            <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options2" id="option1" value="1">1
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options2" id="option2" value="2">2
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options2" id="option3" value="3">3
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options2" id="option1" value="4">4
-                            </label>
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options2" id="option1" value="5">5
-                            </label>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Церковь-Знать</label>
-                        <div class="col-xs-3">                            
-                            <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default">
-                                <input type="radio" name="options3" id="option1" value="1">1
-                            </label>
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options3" id="option2" value="2">2
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options3" id="option3" value="3">3
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options3" id="option1" value="4">4
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options3" id="option1" value="5">5
-                            </label>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Неравенство-Свобода</label>
-                        <div class="col-xs-3">                             
-                            <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default">
-                                <input type="radio" name="options4" id="option1" value="1">1
-                            </label>
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options4" id="option2" value="2">2
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options4" id="option3" value="3">3
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options4" id="option1" value="4">4
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options4" id="option1" value="5">5
-                            </label>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Централизация</label>
-                        <div class="col-xs-3">                            
-                            <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options5" id="option1" value="1">1
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options5" id="option2" value="2">2
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options5" id="option3" value="3">3
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options5" id="option1" value="4">4
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options5" id="option1" value="5">5
-                            </label>
-                            </div>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Милитаризация</label>
-                        <div class="col-xs-3">                            
-                            <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options6" id="option1" value="1">1
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options6" id="option2" value="2">2
-                            </label>
-                            <label class="btn btn-default active">
-                                <input type="radio" name="options6" id="option3" value="3">3
-                            </label>
-                            <label class="btn btn-default">
-                                <input type="radio" name="options6" id="option1" value="4">4
-                            </label>
-                            <label class="btn btn-link disabled">
-                                <input type="radio" name="options6" id="option1" value="5">5
-                            </label>
-                            </div>                            
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Стабильность</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">5 (max. +4)</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Цена стабильности</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">74.3</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Цена появления знати</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">18.5</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Стоимость миграции 0.1 чел</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">9.5 л</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Стоимость колонизации</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">13.5[Колонизация невозможна]</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Цена геологоразведки</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">12.5</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Шанс успеха экспедиции</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">13.5%</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Ассимиляция</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">1.5 кт/о</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Число инквизиторов</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">0 (в т.ч. направлено для инквизиции - 0)</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Число миссионеров</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">0 (в т.ч. послано с миссионерской целью - 0)</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Жертвоприношения</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">нет</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Макс. размер страны</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">Не ограничен</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Эфф. управления</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static"> 70%</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Инфляция</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">12,6%</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Казна</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">40,2 д</p>                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-xs-2">Культура/грамотность</label>
-                        <div class="col-xs-2">                            
-                                <p class="form-control-static">10,3% Высокий уровень</p>                            
-                        </div>
-                    </div>
-                    
-                    <!-- Кнопка -->
-                    <div class="form-group">
-                        <div class="col-xs-offset-2 col-xs-2">
-                            <button type="submit" class="btn btn-primary">Изменить</button>
-                        </div>
-                    </div>
-                    <!-- Кнопка Конец -->
-                    
-                </form>
-            <?php endif; ?>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="lastName">Фамилия:</label>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="lastName" placeholder="Введите фамилию" name="lastname" required>
         </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="firstName">Имя:</label>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="firstName" placeholder="Введите имя" name="firstname" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Дата рождения:</label>
+        <div class="col-xs-1">
+            <select class="form-control">
+                <option>Дата</option>
+            </select>
+        </div>
+        <div class="col-xs-1">
+            <select class="form-control">
+                <option>Месяц</option>
+            </select>
+        </div>
+        <div class="col-xs-1">
+            <select class="form-control">
+                <option>Год</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="inputEmail">Email:</label>
+        <div class="col-xs-3">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="inputPassword">Пароль:</label>
+        <div class="col-xs-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль" name="password" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="confirmPassword">Подтвердите пароль:</label>
+        <div class="col-xs-3">
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Введите пароль ещё раз"  name="repassword" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3" for="phoneNumber">Телефон:</label>
+        <div class="col-xs-3">
+            <input type="tel" class="form-control" id="phoneNumber" placeholder="Введите номер телефона" name="phone" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Пол:</label>
+        <div class="col-xs-1">
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="male" checked> Мужской
+            </label>
+        </div>
+        <div class="col-xs-1">
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="female"> Женский
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-3">
+            <label class="checkbox-inline">
+                <input type="checkbox" value="agree" required>  Я согласен с <a href="#">условиями</a>.
+            </label>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-3">
+            <input type="submit" class="btn btn-primary" value="Регистрация" name="submit">
+            <input type="reset" class="btn btn-default" value="Очистить форму" name="reset">
+        </div>
+    </div>
+</form>
 
-        <!-- Конец Раздела 1 -->
-<hr>        
 
-
-
-
-    </div> <!-- /container -->
-  </body>
+</body>
 </html>
+
+<?php
+function usermaneCorrect ($username){
+    if (strlen($username)<=3){
+        print_r ('Количество символов должно быть более 3');
+    } else {
+        print_r ('Количество символов более 3');
+    }
+
+}
+
+
+function fieldIsset($field) {
+    if (isset($field) && !empty($field)) {
+        return true;
+    }
+    return false;
+}
+function emailCorrect ($email){
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "E-mail ($email) указан верно.\n";
+    } else {
+        echo 'E-mail указан неверно.';
+    }
+
+}
+function ageCorrect($age){
+    if ($age >=18 && $age <=200){
+        print_r('Возраст корректный');
+    } else {
+        print_r('Возраст некорректный');
+
+    }
+}
+function aboutCorrect($about){
+    if ( strlen($about) < 10 || strlen($about) >30){
+        print_r('О себе слишком мало или много!');
+    } else {
+        print_r('О себе правильно!!');
+
+    }
+}
+
+
+function phoneCorrect($phone){
+    if(preg_match('/^[0-9]{11}$/', $phone)) {
+        print_r ('Введено 11 цифр');
+    } else {
+        print_r ('Некорректный номер телефона');
+    }
+}
+
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $gender = $_POST['gender'];
+
+    if (fieldIsset($firstname)) {
+        print_r('Имя задано ');
+    }
+    emailCorrect($email);
+    phoneCorrect($phone);
+    usermaneCorrect($username);
+
+}
