@@ -67,10 +67,11 @@
         <div class="row">
             <?php foreach ($products as $product) : ?>
                 <div class="card">
-                    <img src="http://via.placeholder.com/350x150" alt="Card image cap">
+                    <img src="<?php echo getImage($product) ?>" alt="Card image cap">
                     <h6><?php echo getName($product) ?></h6>
                     <span>Цена: <?php echo getPrice($product) ?></span>
-                    <p class="card-text"><?php getDescription($product) ?></p>
+                    <p class="card-text"><?php echo getDescription($product) ?></p>
+                    <button type="button" class="btn btn-primary btn-sm">Купить</button>
                 </div>
             <?php endforeach; ?>
 
