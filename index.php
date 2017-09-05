@@ -71,7 +71,7 @@
                     <h6><?php echo getName($product) ?></h6>
                     <span>Цена: <?php echo getPrice($product) ?></span>
                     <p class="card-text"><?php echo getDescription($product) ?></p>
-                    <a href="<?php echo getButton($product) ?>"class="btn btn-primary btn-sm">Купить</a>
+                    <a href="<?php echo getButton($product) ?>" target="_blank" class="btn btn-primary btn-sm">Купить</a>
                 </div>
             <?php endforeach; ?>
 
