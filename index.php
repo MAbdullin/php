@@ -65,16 +65,37 @@
     <div class="container">
 
         <div class="row">
-            <?php foreach ($products as $product) : ?>
-                <div class="card">
-                    <img src="<?php echo getImage($product) ?>" alt="Card image cap">
-                    <h6><?php echo getName($product) ?></h6>
-                    <span>Цена: <?php echo getPrice($product) ?></span>
-                    <p class="card-text"><?php echo getDescription($product) ?></p>
-                    <a href="<?php echo getButton($product) ?>" target="_blank" class="btn btn-primary btn-sm">Купить</a>
-                </div>
-            <?php endforeach; ?>
+<!--            --><?php //foreach ($products as $product) : ?>
+<!--                <div class="card">-->
+<!--                    <img src="--><?php //echo getImage($product) ?><!--" alt="Card image cap">-->
+<!--                    <h6>--><?php //echo getName($product) ?><!--</h6>-->
+<!--                    <span>Цена: --><?php //echo getPrice($product) ?><!--</span>-->
+<!--                    <p class="card-text">--><?php //echo getDescription($product) ?><!--</p>-->
+<!--                    <a href="--><?php //echo getButton($product) ?><!--" target="_blank" class="btn btn-primary btn-sm">Купить</a>-->
+<!--                </div>-->
+<!--            --><?php //endforeach; ?>
+            <?php foreach ($products_new as $product) : ?>
+            <div class="card">
+                <img src="<?= $product['image'] ?>">
+                <h6>Название: <?= $product['name'] ?></h6>
+                <span>Цена: <?= $product['price'] ?></span>
+                <p>Описание: <?= $product['description'] ?></p>
+                <a href="<?= $product['link'] ?>" type="btn">Купить</a>
+                <p>
+                    Доступные цвета:
+                    <?php foreach ($product ['colors'] as $color) : ?>
+                    <span><?= $color ?>,</span>
+                    <?php endforeach; ?>
 
+                </p>
+                <p>
+                    Доступные цвета: <br>
+<!--                    --><?php //foreach ($product ['colors'] as $color) : ?>
+                        <?= implode(', ', $product ['colors']) ?>
+
+                </p>
+            </div>
+            <?php endforeach; ?>
         </div>
 
     </div>
@@ -93,4 +114,3 @@
 
 </body>
 </html>
-

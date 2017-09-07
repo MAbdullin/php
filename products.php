@@ -38,3 +38,52 @@
         return $product[4];
 
     }
+    $products_new =[
+        [
+        'name'=> 'название1',
+        'price' => 100,
+        'description' => 'lorem lorem',
+        'image' => './img/1.png',
+        'link' => 'https://google.ru/'
+,            'colors'=> ['Белый', 'Красный']
+    ],
+    [
+        'name'=> 'название2',
+        'price' => 100,
+        'description' => 'lorem lorem',
+        'image' => './img/2.png',
+        'link' => 'https://google.ru/',
+        'colors'=> ['Белый', 'Красный']
+    ],
+    [
+        'name'=> 'название3',
+        'price' => 100,
+        'description' => 'lorem lorem',
+        'image' => './img/3.png',
+        'link' => 'https://google.ru/',
+        'colors'=> ['Белый', 'Красный']
+    ],
+    [
+        'name'=> 'название4',
+        'price' => 100,
+        'description' => 'lorem lorem',
+        'image' => './img/4.png',
+        'link' => 'https://google.ru/',
+        'colors'=> ['Белый', 'Красный']
+    ],        [
+        'name'=> 'название5',
+        'price' => 100,
+        'description' => 'lorem lorem',
+        'image' => './img/5.png',
+        'link' => 'https://google.ru/'
+,        'colors'=> ['Белый', 'Красный']
+    ],
+    [
+        'name'=> 'название6',
+        'price' => 100,
+        'description' => 'lorem lorem',
+        'image' => './img/6.png',
+        'link' => 'https://google.ru/',
+        'colors'=> ['Белый', 'Красный']
+    ]
+];
