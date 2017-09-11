@@ -1,5 +1,4 @@
 <?php require_once './products.php'; //gjlrk.xbkb afqk cj crhbgnjv
-
 ?>
 
 
@@ -14,7 +13,6 @@
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/album.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -39,6 +37,7 @@
         </div>
     </div>
 </div>
+
 <div class="navbar navbar-dark bg-dark">
     <div class="container d-flex justify-content-between">
         <a href="#" class="navbar-brand">Album</a>
@@ -63,7 +62,6 @@
 
 <div class="album text-muted">
     <div class="container">
-
         <div class="row">
 <!--            --><?php //foreach ($products as $product) : ?>
 <!--                <div class="card">-->
@@ -97,7 +95,6 @@
             </div>
             <?php endforeach; ?>
         </div>
-
     </div>
 </div>
 
