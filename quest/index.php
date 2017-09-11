@@ -11,15 +11,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Победи дракона</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/mynavbar.js"></script>
+
 <!-- Навигационное меню -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -36,16 +34,13 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <img src="<?php echo getImage($steps) ?>" alt="Card image cap">
+            <img src="./img/avatar1.jpg" class="img-thumbnail" alt="Card image cap">
         </div>
 
 
-        <div class="col-sm-8">
+        <div class="col-sm-10">
+            <?=$question ?>
 
-        </div>
-        <div class="col-sm-2">
-            <p>1 ход</p>
-            <p>Экипировка:</p>
         </div>
     </div>
 
@@ -55,12 +50,10 @@
 
 <form action="index.php" method="post">
     <div class="container">
-        <div>
-            <?=$question ?>
 
-        </div>
-        <div class="form-horizontal">
+        <div class="row btn-group-vertical col-sm-12">
             <?php foreach ($answers as $answer) : ?>
+            <label class="btn btn-default  btn-lg btn-block">
                 <input
                     type="radio"
                     name="answer"
@@ -68,14 +61,20 @@
                 >
 
                 <?= $answer['text']; ?>
+            </label>
             <?php endforeach; ?>
-       </div>
-                <input type="submit" name="submit" value="Отправить">
-        <div>
-            <?=$result ?>
 
         </div>
     </div>
+    <div class="clearfix"></div>
+    <div class="container">
+        <input type="submit" class="btn btn-primary" name="submit" value="Отправить">
+    </div>
+    <div class="container">
+        <?=$result ?>
+
+    </div>
+
 </form>
 </body>
 </html>
