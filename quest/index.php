@@ -30,11 +30,11 @@
     </div>
 </nav>
 
-
+g
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <img src="<?= $step['image'] ?>">
+            <img src="<?= $step['image'] ?>" class="img-thumbnail">
         </div>
 
 
