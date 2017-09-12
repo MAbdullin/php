@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <img src="<?= $step['image'] ?>" class="img-thumbnail">
+            <img src="<?= $step['image'] ?>">
         </div>
 
 
@@ -47,34 +47,39 @@
 </div>
 
 
-
+<?php foreach ($answers as $answer) : ?>
 <form action="index.php" method="post">
     <div class="container">
 
         <div class="row btn-group-vertical col-sm-12">
-            <?php foreach ($answers as $answer) : ?>
-            <label class="btn btn-default  btn-lg btn-block">
-                <input
+
+
+                <!--<input
                     type="radio"
                     name="answer"
-                    value=<?=json_encode($answer) ?>
-                >
+                    value=<?/*=json_encode($answer) */?>
+                >-->
+                <input type="submit" class="btn btn-default btn-lg btn-block" name="submit" value="<?= $answer['text']; ?>">
+                <input type="hidden" id="<?= $answer['function'] ?>" name="function" value="<?= $answer['function'] ?>" />
+                <input type="hidden" id="<?= $answer['next_step'] ?>" name="next_step" value="<?= $answer['next_step'] ?>" />
 
-                <?= $answer['text']; ?>
-            </label>
-            <?php endforeach; ?>
+
+
+
 
         </div>
     </div>
     <div class="clearfix"></div>
     <div class="container">
-        <input type="submit" class="btn btn-primary" name="submit" value="Отправить">
-    </div>
-    <div class="container">
-        <?=$result ?>
-
+        <!--<input type="submit" class="btn btn-primary" name="submit" value="Отправить">-->
     </div>
 
 </form>
+<?php endforeach; ?>
+
+<div class="container">
+    <?=$result ?>
+
+</div>
 </body>
 </html>

@@ -3,6 +3,9 @@ $question = '';
 $answers = [];
 $result = '';
 $image = '';
+$winImage='./img/winner.jpg';
+$loseImage='./img/gameover.jpg';
+
 
 $steps = [
     [
@@ -45,7 +48,7 @@ $steps = [
     ],
     [
         'id' => 3,
-        'image' =>'./img/avatar3.jpg',
+        'image' =>'./img/sword3.jpg',
         'question' => 'Ну конечно же меч! <br> Пойдем убивать дракона?',
         'answers' => [
             [
@@ -92,7 +95,8 @@ function generateAnswers($step)
 }
 
 if (isset($_POST['submit'])) {
-    $answer = json_decode($_POST['answer'], true);
+    $answer['next_step']=$_POST['next_step'];
+    $answer['function']=$_POST['function'];
     if ($answer['function'] === 'next'){
         $step = findNextStep($answer['next_step'], $steps);
         $question = generateQuestion($step);
@@ -100,8 +104,10 @@ if (isset($_POST['submit'])) {
         $image = generateImage($step);
     } else if ($answer['function'] === 'endGame'){
         $result = 'Вы проиграли';
+        $step['image'] = $loseImage;
     } else if ($answer['function'] === 'win'){
-        $result = 'Вы выиграли';
+        $result = 'Вы победили';
+        $step['image'] = $winImage;
     }
 
 } else {
