@@ -30,7 +30,7 @@
     </div>
 </nav>
 
-g
+
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
