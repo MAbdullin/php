@@ -34,7 +34,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-2">
-            <img src="./img/avatar1.jpg" class="img-thumbnail" alt="Card image cap">
+            <img src="<?= $step['image'] ?>" class="img-thumbnail">
         </div>
 
 
