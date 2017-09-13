@@ -21,10 +21,12 @@ function getAll()
 function add($data)
 {
 
-    $username= addslashes($data['username']);
+    $username = addslashes($data['username']);
+    $username = strip_tags ($username);
     $username = htmlspecialchars($username);
     $username = trim($username);
-    $message= addslashes($data['message']);
+    $message = addslashes($data['message']);
+    $message = strip_tags ($message);
     $message = htmlspecialchars($message);
     $message = trim($message);
 
