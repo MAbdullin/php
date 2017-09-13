@@ -6,9 +6,6 @@ if (isset($_POST['submit'])) {
     add($_POST);
 }
 
-/*echo '<pre>';*/
-/*print_r(getAll());*/
-
 function getAll()
 {
     $elements = [];
@@ -25,7 +22,12 @@ function add($data)
 {
 
     $username= addslashes($data['username']);
+    $username = htmlspecialchars($username);
+    $username = trim($username);
     $message= addslashes($data['message']);
+    $message = htmlspecialchars($message);
+    $message = trim($message);
+
     $time = date("H:i");
 
     $row = "[" . $time . "]" . "\t" . $username . ":"  . "\t" . $message . PHP_EOL;
