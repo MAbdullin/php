@@ -38,7 +38,7 @@
 </table>
 </div>
 <div class="container">
-<form action="/lesson12.1/index.php" method="post">
+<form action="/chat/index.php" method="post">
     <div class="row">
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <input type="text" class="form-control input-lg" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{3,}$" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">

@@ -24,8 +24,8 @@ function getAll()
 function add($data)
 {
 
-    $username= $data['username'];
-    $message= $data['message'];
+    $username= addslashes($data['username']);
+    $message= addslashes($data['message']);
     $time = date("H:i");
 
     $row = "[" . $time . "]" . "\t" . $username . ":"  . "\t" . $message . PHP_EOL;
