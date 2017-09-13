@@ -2,6 +2,7 @@ body
 {
 /*Для отступа от навбара*/
 padding-top: 50px;
+padding-bottom: 100px;
 }
 .splash { 
 /* Отступ до содержимого splash */

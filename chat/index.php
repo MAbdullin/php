@@ -37,25 +37,26 @@
     <?php endforeach; ?>
 </table>
 </div>
-<div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+<div class="container" >
 <form action="/chat/index.php" method="post">
     <div class="row">
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <input type="text" class="form-control input-lg" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{3,}$" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">
+            <input type="text" class="form-control input-lg" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-            <input type="text" class="form-control input-lg" name="message" placeholder="Сообщение" required>
+            <input type="text" class="form-control input-lg" name="message" placeholder="Сообщение">
         </div>
         <div class="clearfix"></div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 btn-group">
-            <button class="btn-default btn-lg btn-block" type="submit" name="submit">Отправить</button>
+            <button class="btn-default btn-lg btn-block btn-info" type="submit" name="submit">Отправить</button>
         </div>
     </div>
-</div>
+
 </form>
-
-
+</div>
+</nav>
 </body>
 </html>

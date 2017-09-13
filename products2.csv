@@ -1,0 +1,9 @@
+[16:40]	A123:	11222
+[16:45]	M123123:	<script>alert(\'Взлом\')</script>
+[16:46]	A2123:	<script>while(true) alert(\'Взломан\')</script>
+[16:46]	A2123:	<script>while(true) alert(\'Взломан\')</script>
+[17:37]	:	<script>alert(\'Проверка\')</script>
+[17:38]	funtik:	<script>alert(\'Проверка\')</script>
+[17:38]	dwadaw:	<script>alert(1);</script>
+[17:40]	fesd:	<script>alert(\'1\');</script>
+[17:41]	:	<script>var i = 0; while(true) alert(i++)</script>

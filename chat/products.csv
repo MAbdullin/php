@@ -40,3 +40,9 @@
 [15:38]	A123:	21212
 [16:05]	F123:	Попробуй это детка!
 [16:09]	RrrR1:	&lt;br /&gt;&lt;b&gt;Notice&lt;/b&gt;:  Undefined variable: username in &lt;b&gt;C:\\xampp\\htdocs\\lesson12.1\\index.php&lt;/b&gt; on line &lt;b&gt;29&lt;/b&gt;&lt;br /&gt;
+[16:27]	A123:	alert(\'Взлом\')
+[16:28]	A123:	while(true) alert(\'Взломан\')
+[16:31]	A123:	while(true) alert(\'Взломан\')
+[16:41]	A123:	while(true) alert(\'Взломан\')
+[16:41]	:	
+[16:44]	:	alert(\\\'Проверка\\\')
