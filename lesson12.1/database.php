@@ -4,7 +4,6 @@
 
 if (isset($_POST['submit'])) {
     add($_POST);
-    echo 'Сообщение отправлено';
 }
 
 /*echo '<pre>';*/
