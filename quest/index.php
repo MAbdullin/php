@@ -27,7 +27,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
                 <span class="sr-only">Toggle navigation</span>
             </button>
-            <a class="navbar-brand" href="#">Победи дракона</a>
+            <a class="navbar-brand" href="#">Королевский квест</a>
         </div>
     </div>
 </nav>
@@ -35,46 +35,31 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-2">
-            <img src="<?= $step['image'] ?>" class="img-thumbnail">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"">
+            <img class="img-responsive center-block" src="<?= $step['image'] ?>">
         </div>
+        <div class="clearfix"></div>
 
-
-        <div class="col-sm-10">
+        <div class="container">
             <?=$question ?>
-
         </div>
     </div>
 
 </div>
-
+<div class="clearfix"></div>
 
 <?php foreach ($answers as $answer) : ?>
 <form action="index.php" method="post">
     <div class="container">
-
-        <div class="row btn-group-vertical col-sm-12">
-
-
-                <!--<input
-                    type="radio"
-                    name="answer"
-                    value=<?/*=json_encode($answer) */?>
-                >-->
+        <div class="row">
+            <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <input type="submit" class="btn btn-default btn-lg btn-block" name="submit" value="<?= $answer['text']; ?>">
                 <input type="hidden" id="<?= $answer['function'] ?>" name="function" value="<?= $answer['function'] ?>" />
                 <input type="hidden" id="<?= $answer['next_step'] ?>" name="next_step" value="<?= $answer['next_step'] ?>" />
-
-
-
-
-
+            </div>
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="container">
-        <!--<input type="submit" class="btn btn-primary" name="submit" value="Отправить">-->
-    </div>
 
 </form>
 <?php endforeach; ?>
