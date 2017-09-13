@@ -26,7 +26,7 @@
 
 <form action="/lesson12.1/index.php" method="post"><!--
     <input type="text" name="time" placeholder="Время">-->
-    <input type="text" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">
+    <input type="text" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{3,}$" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">
     <input type="text" name="message" placeholder="Сообщение">
     <button type="submit" name="submit">Отправить</button>
 </form>
