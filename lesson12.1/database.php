@@ -1,8 +1,10 @@
 <?php
 
+
+
 if (isset($_POST['submit'])) {
     add($_POST);
-    echo 'Товар добавлен';
+    echo 'Сообщение отправлено';
 }
 
 /*echo '<pre>';*/
@@ -22,10 +24,12 @@ function getAll()
 
 function add($data)
 {
-    $title = $data['title'];
-    $price= $data['price'];
 
-    $row = $title . "\t" . $price . PHP_EOL;
+    $username= $data['username'];
+    $message= $data['message'];
+    $time = date("H:i");
+
+    $row = "[" . $time . "]" . "\t" . $username . ":"  . "\t" . $message . PHP_EOL;
 
     file_put_contents('./products.csv', $row, FILE_APPEND);
 }

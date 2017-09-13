@@ -19,14 +19,16 @@
     <tr>
         <td><?php echo $product[0] ?></td>
         <td><?php echo $product[1] ?></td>
+        <td><?php echo $product[2] ?></td>
     </tr>
     <?php endforeach; ?>
 </table>
 
-<form action="/lesson12.1/index.php" method="post">
-    <input type="text" name="title" placeholder="Название">
-    <input type="text" name="price" placeholder="Цена">
-    <button type="submit" name="submit">Добавить</button>
+<form action="/lesson12.1/index.php" method="post"><!--
+    <input type="text" name="time" placeholder="Время">-->
+    <input type="text" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">
+    <input type="text" name="message" placeholder="Сообщение">
+    <button type="submit" name="submit">Отправить</button>
 </form>
 
 </body>
