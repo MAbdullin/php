@@ -44,6 +44,7 @@
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <input type="text" class="form-control input-lg" name="username" placeholder="Имя" value="<?=isset($_POST['username'])?htmlspecialchars($_POST['username']):'';?>">
         </div>
+
         <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
             <input type="text" class="form-control input-lg" name="message" placeholder="Сообщение">
         </div>
