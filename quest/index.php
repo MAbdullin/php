@@ -11,7 +11,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Победи дракона</title>
+
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootflat.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
