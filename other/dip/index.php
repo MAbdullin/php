@@ -243,9 +243,7 @@
                             <h2>Блок</h2>
                             <hr class="star-primary">
                             <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -280,9 +278,7 @@
                             <h2>Блок</h2>
                             <hr class="star-primary">
                             <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -317,9 +313,7 @@
                             <h2>Блок</h2>
                             <hr class="star-primary">
                             <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -354,9 +348,7 @@
                             <h2>Блок</h2>
                             <hr class="star-primary">
                             <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -391,9 +383,7 @@
                             <h2>Блок</h2>
                             <hr class="star-primary">
                             <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -427,10 +417,8 @@
                         <div class="modal-body">
                             <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/PROJECT TITLE
+
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
