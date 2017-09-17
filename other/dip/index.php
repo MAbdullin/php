@@ -136,7 +136,7 @@
 <!-- About Section -->
 <section class="success" id="about">
     <div class="container">
-        <h2 class="text-center">Дополнительное поле I</h2>
+        <h2 class="text-center">Доп. I</h2>
         <hr class="star-light">
         <div class="row">
             <div class="col-lg-4 ml-auto">
@@ -157,7 +157,7 @@
 <!-- Contact Section -->
 <section id="contact">
     <div class="container">
-        <h2 class="text-center">Дополнительное поле II</h2>
+        <h2 class="text-center">Доп. поле II</h2>
         <hr class="star-primary">
 
     </div>

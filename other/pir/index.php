@@ -157,7 +157,7 @@
 <!-- Contact Section -->
 <section id="contact">
     <div class="container">
-        <h2 class="text-center">Дополнительное поле</h2>
+        <h2 class="text-center">Доп. поле</h2>
         <hr class="star-primary">
 
     </div>
