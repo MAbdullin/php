@@ -42,10 +42,10 @@
                     <a class="nav-link js-scroll-trigger" href="#portfolio">Действия</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">График</a>
+                    <a class="nav-link js-scroll-trigger" href="#about">Доп. поле I</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Доп. поле</a>
+                    <a class="nav-link js-scroll-trigger" href="#contact">Доп. поле II</a>
                 </li>
             </ul>
         </div>
@@ -56,9 +56,9 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text">
-            <span class="name">Мост</span>
+            <span class="name">ПИР</span>
             <hr class="star-light">
-            <span class="skills">В этом поле рекомендую поставить игроку цели, задачи, следующее за ним поле - двухуровневый список действий.</span>
+            <span class="skills">В это вставляем все, что нужно игроку, что от него хочет игра</span>
         </div>
     </div>
 </header>
@@ -76,7 +76,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
+                    <img class="img-fluid" src="http://via.placeholder.com/900x650" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -86,7 +86,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/cake.png" alt="">
+                    <img class="img-fluid" src="http://via.placeholder.com/900x650" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -96,7 +96,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/circus.gif" alt="">
+                    <img class="img-fluid" src="http://via.placeholder.com/900x650" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -106,7 +106,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/game.png" alt="">
+                    <img class="img-fluid" src="http://via.placeholder.com/900x650" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -116,7 +116,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/safe.png" alt="">
+                    <img class="img-fluid" src="http://via.placeholder.com/900x650" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -126,7 +126,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
+                    <img class="img-fluid" src="http://via.placeholder.com/900x650" alt="">
                 </a>
             </div>
         </div>
@@ -136,7 +136,7 @@
 <!-- About Section -->
 <section class="success" id="about">
     <div class="container">
-        <h2 class="text-center">График</h2>
+        <h2 class="text-center">Доп. поле I</h2>
         <hr class="star-light">
         <div class="row">
             <div class="col-lg-4 ml-auto">
@@ -157,7 +157,7 @@
 <!-- Contact Section -->
 <section id="contact">
     <div class="container">
-        <h2 class="text-center">Доп. поле</h2>
+        <h2 class="text-center">Доп. поле II</h2>
         <hr class="star-primary">
 
     </div>
@@ -170,12 +170,6 @@
             <div class="row">
                 <div class="footer-col col-md-4">
                     <h3>Adress</h3>
-                    <p>423600, Республика Татарстан,<br>
-                        Елабужский муниципальный район,<br>
-                        г. Елабуга,<br>
-                        промышленная площадка «Алабуга»,<br>
-                        ул. Ш-2, корп. 4/1
-                    </p>
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>Around the Web</h3>
@@ -246,12 +240,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2>Команда</h2>
+                            <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="img/portfolio/cabin.png" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -283,12 +275,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2>Поиск</h2>
+                            <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="img/portfolio/cake.png" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -320,12 +310,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2>Стройка</h2>
+                            <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="img/portfolio/circus.gif" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -357,12 +345,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2>ИВЕНТЫ</h2>
+                            <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="img/portfolio/game.png" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -394,12 +380,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="img/portfolio/safe.png" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -431,12 +415,10 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="img/portfolio/submarine.png" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error esse exercitationem ipsa
-                                molestiae neque nulla placeat reprehenderit repudiandae saepe veritatis! Aspernatur
-                                ducimus ea fuga ipsum laudantium libero nam, quo soluta!</p>
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">

@@ -39,6 +39,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">Форум</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">Чат</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#portfolio">Действия</a>
                 </li>
                 <li class="nav-item">
@@ -417,8 +423,8 @@
                         <div class="modal-body">
                             <h2>Блок</h2>
                             <hr class="star-primary">
-                            <img class="img-fluid img-centered" src="http://via.placeholder.com/PROJECT TITLE
-
+                            <img class="img-fluid img-centered" src="http://via.placeholder.com/900x650" alt="">
+                            <p>В это модальное окно можно добавить любую форму отправки</p>
                             <div class="container">
                                 <form action="index.php" method="post">
                                     <div class="btn-group-vertical col-xs-12 col-sm-12 col-md-12 col-lg-12">
