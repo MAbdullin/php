@@ -1,5 +1,8 @@
 <?php
+
 use Controllers\IndexController;
+
+spl_autoload_register();
 
 class Router
 {
@@ -10,24 +13,30 @@ class Router
     {
 
         $url = $_SERVER['PATH_INFO'] ?? null;
+        $method = $_SERVER['REQUEST_METHOD'];
 
-        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            if ($url === NULL || $url === '/'){
-                (new  IndexController())->index();
 
-            } else if (preg_match($this->action_pattern, $url, $this->matches)){
-                echo '<pre>';
-                var_dump($this->matches);
+        if ($url === NULL || $url === '/') {
+            (new  IndexController())->index();
+        } else if (preg_match($this->action_pattern, $url, $this->matches)) {
+            $entity = $this->matches['entity'];
+            $action = $this->matches['action'];
+            $id = $this->matches['id'];
 
-            } else {
-                print_r('Страница не найдена');
-                die();
+            if ($entity === 'products') {
+                $controller = new \Controllers\ProductController();
+                $controller->execute($method, $action, $id);
+
+            } else if ($entity === 'reviews') {
+                $controller = new \Controllers\ReviewController();
+                $controller->execute($method, $action, $id);
             }
 
-        } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // создание
-            // удаление
-            // обновление
+        } else {
+            print_r('Страница не найдена');
+            die();
         }
+
+
     }
 }

@@ -35,17 +35,17 @@
                         <td><?= $product['price'] ?></td><!--
                         <td><?/*= $product['timestamp'] */?></td>-->
                         <td>
-                            <a href="views/products_view.php?id=<?= $product['id'] ?>">
+                            <a href="index.php/products/<?= $product['id'] ?>/view">
                                 Перейти
                             </a>
                         </td>
                         <td>
-                            <a href="views/products_edit.php?id=<?= $product['id'] ?>">
+                            <a href="index.php/products/<?= $product['id'] ?>/edit">
                                 Редактировать
                             </a>
                         </td>
                         <td>
-                            <form action="handler.php" method="POST">
+                            <form action="index.php/products/<?= $product['id'] ?>/delete" method="POST">
                                 <input
                                     type="hidden"
                                     name="id"
@@ -95,11 +95,6 @@
                         </td>
                         <td>
                             <form action="handler.php" method="POST">
-                                <input
-                                    type="hidden"
-                                    name="id"
-                                    value="<?= $review['id'] ?>"
-                                >
                                 <button type="submit" name="delete">Удалить</button>
                             </form>
                         </td>
