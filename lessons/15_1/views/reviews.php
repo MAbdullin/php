@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Редактирование товара</title>
     <link rel="stylesheet" href="/15_1/css/bootstrap.min.css">
-    <base href="/15_1/">
+    <base href="/lessons/15_1/">
 </head>
 <body>
 <div class="container">
@@ -19,7 +19,7 @@
             <h4><?= $review['text'] ?></h4>
             <h5><?= $review['created_at'] ?></h5>
             <?php if ($editable === true) : ?>
-                <form action="handler.php" method="post">
+                <form action="reviews/<?= $review['id'] ?>/edit" method="post">
                     <div class="form-group">
                         <label for="title">Имя</label>
                         <input type="text" class="form-control" name="name" id="title" value="<?= $review['name'] ?>">
@@ -32,8 +32,7 @@
                         <label for="price">Сообщение</label>
                         <input type="text" class="form-control" name="text" value="<?= $review['text'] ?>">
                     </div>
-                    <input type="hidden" name="id" value="<?= $_REQUEST['id'] ?>">
-                    <button type="submit" name="edit">Отредактировать</button>
+                    <button type="submit">Отредактировать</button>
                 </form>
             <?php endif; ?>
         </div>

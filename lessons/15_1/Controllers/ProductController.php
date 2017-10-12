@@ -12,7 +12,7 @@ use Models\Product;
 
 class ProductController
 {
-    public function execute($method, $action, $id)
+    public function execute($method, $action, $id = null)
     {
         $_product = new Product();
         if ($method === 'GET') {
@@ -33,11 +33,11 @@ class ProductController
             if ($action === 'edit') {
                 $_product->update($id, $_POST);
             } else if ($action === 'delete') {
-                $_product->delete($id, $_POST);
+                $_product->delete($id);
             } else if ($action === 'create') {
-                $_product->create($id, $_POST);
+                $_product->create($_POST);
             }
-            header('location:/15_1/');
+            header('location:/lessons/15_1/');
         }
     }
 }

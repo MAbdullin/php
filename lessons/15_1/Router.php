@@ -7,6 +7,7 @@ spl_autoload_register();
 class Router
 {
     protected $action_pattern = "/(?P<entity>\w+)\/(?P<id>\d+)\/(?P<action>\w+)/";
+    protected $create_pattern = "/(?P<entity>\w+)\/(?P<action>\w+)/";
     protected $matches = [];
 
     public function execute()
@@ -32,7 +33,21 @@ class Router
                 $controller->execute($method, $action, $id);
             }
 
+        } else if(preg_match($this->create_pattern, $url, $this->matches)) {
+            $entity = $this->matches['entity'];
+            $action = $this->matches['action'];
+
+            if ($entity === 'products') {
+                $controller = new \Controllers\ProductController();
+                $controller->execute($method, $action);
+
+            } else if ($entity === 'reviews') {
+                $controller = new \Controllers\ReviewController();
+                $controller->execute($method, $action);
+            }
+
         } else {
+           /*Показать ошибку*/
             print_r('Страница не найдена');
             die();
         }

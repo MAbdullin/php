@@ -10,9 +10,10 @@ namespace Controllers;
 
 use Models\Product;
 use Models\Review;
+
 class ReviewController
 {
-    public function execute($method, $action, $id)
+    public function execute($method, $action, $id = null)
     {
         $_review = new Review();
         if ($method === 'GET') {
@@ -29,14 +30,15 @@ class ReviewController
                 }
                 include_once dirname(__FILE__) . '/../views/reviews.php';
             }
-        } else if ($method === 'POST'){
-            if ($action === 'edit'){
-                $_review-> update($id, $_POST);
-            } else if ($action === 'delete'){
-                $_review-> delete($id, $_POST);
-            } else if ($action === 'create'){
-                $_review-> create($id, $_POST);
+        } else if ($method === 'POST') {
+            if ($action === 'edit') {
+                $_review->update($id, $_POST);
+            } else if ($action === 'delete') {
+                $_review->delete($id);
+            } else if ($action === 'create') {
+                $_review->create($_POST);
             }
+            header('location:/lessons/15_1/');
         }
     }
 }

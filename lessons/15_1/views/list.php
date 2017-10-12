@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/15_1/css/bootstrap.min.css">
-    <base href="/15_1/">
+    <base href="/lessons/15_1/">
 </head>
 <body>
 <div class="container">
@@ -33,24 +33,19 @@
                         <td><?= $product['title'] ?></td>
                         <td><?= $product['description'] ?></td>
                         <td><?= $product['price'] ?></td><!--
-                        <td><?/*= $product['timestamp'] */?></td>-->
+                        <td><? /*= $product['timestamp'] */ ?></td>-->
                         <td>
-                            <a href="index.php/products/<?= $product['id'] ?>/view">
+                            <a href="products/<?= $product['id'] ?>/view">
                                 Перейти
                             </a>
                         </td>
                         <td>
-                            <a href="index.php/products/<?= $product['id'] ?>/edit">
+                            <a href="products/<?= $product['id'] ?>/edit">
                                 Редактировать
                             </a>
                         </td>
                         <td>
-                            <form action="index.php/products/<?= $product['id'] ?>/delete" method="POST">
-                                <input
-                                    type="hidden"
-                                    name="id"
-                                    value="<?= $product['id'] ?>"
-                                >
+                            <form action="products/<?= $product['id'] ?>/delete" method="POST">
                                 <button type="submit" name="delete">Удалить</button>
                             </form>
                         </td>
@@ -58,6 +53,14 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
+           <!-- форма для добавления товара-->
+            <form action="products/create" method="POST">
+                <input type="text" name="title" placeholder="Название">
+                <input type="text" name="description" placeholder="Описание">
+                <input type="number" name="price" placeholder="Цена">
+                <button type="submit">Создать</button>
+
+            </form>
         </div>
     </div>
     <h1>Отзывы</h1>
@@ -82,36 +85,25 @@
                         <td><?= $review['name'] ?></td>
                         <td><?= $review['phone'] ?></td>
                         <td><?= $review['text'] ?></td><!--
-                        <td><?/*= $review['timestamp'] */?></td>-->
+                        <td><? /*= $review['timestamp'] */ ?></td>-->
                         <td>
-<<<<<<< HEAD
-                            <a href="index.php/$reviews/<?= $review['id'] ?>/view">
-=======
-                            <a href="views/reviews_view.php?id=<?= $review['id'] ?>">
->>>>>>> 3c93d50dbe13ac035c1c8d2c30148769611115be
+
+                            <a href="reviews/<?= $review['id'] ?>/view">
+
+
                                 Перейти
                             </a>
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <a href="index.php/$reviews/<?= $review['id'] ?>/edit">
-=======
-                            <a href="views/reviews_edit.php?id=<?= $review['id'] ?>">
->>>>>>> 3c93d50dbe13ac035c1c8d2c30148769611115be
+
+                            <a href="reviews/<?= $review['id'] ?>/edit">
+
                                 Редактировать
                             </a>
                         </td>
                         <td>
-<<<<<<< HEAD
-                            <form action="index.php/reviews/<?= $review['id'] ?>/delete" method="POST">
-                                <input
-                                        type="hidden"
-                                        name="id"
-                                        value="<?= $review['id'] ?>"
-                                >
-=======
-                            <form action="handler.php" method="POST">
->>>>>>> 3c93d50dbe13ac035c1c8d2c30148769611115be
+
+                            <form action="reviews/<?= $review['id'] ?>/delete" method="POST">
                                 <button type="submit" name="delete">Удалить</button>
                             </form>
                         </td>
@@ -119,6 +111,14 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
+            <!-- форма для добавления товара-->
+            <form action="reviews/create" method="POST">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="number" name="phone" placeholder="Телефон">
+                <input type="text" name="text" placeholder="Сообщение">
+                <button type="submit">Создать</button>
+
+            </form>
         </div>
     </div>
 </div>

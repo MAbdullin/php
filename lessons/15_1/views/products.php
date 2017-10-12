@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Редактирование товара</title>
     <link rel="stylesheet" href="/15_1/css/bootstrap.min.css">
-    <base href="/15_1/">
+    <base href="/lessons/15_1/">
 </head>
 <body>
 <div class="container">
