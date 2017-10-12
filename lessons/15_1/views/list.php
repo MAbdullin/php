@@ -84,17 +84,34 @@
                         <td><?= $review['text'] ?></td><!--
                         <td><?/*= $review['timestamp'] */?></td>-->
                         <td>
+<<<<<<< HEAD
+                            <a href="index.php/$reviews/<?= $review['id'] ?>/view">
+=======
                             <a href="views/reviews_view.php?id=<?= $review['id'] ?>">
+>>>>>>> 3c93d50dbe13ac035c1c8d2c30148769611115be
                                 Перейти
                             </a>
                         </td>
                         <td>
+<<<<<<< HEAD
+                            <a href="index.php/$reviews/<?= $review['id'] ?>/edit">
+=======
                             <a href="views/reviews_edit.php?id=<?= $review['id'] ?>">
+>>>>>>> 3c93d50dbe13ac035c1c8d2c30148769611115be
                                 Редактировать
                             </a>
                         </td>
                         <td>
+<<<<<<< HEAD
+                            <form action="index.php/reviews/<?= $review['id'] ?>/delete" method="POST">
+                                <input
+                                        type="hidden"
+                                        name="id"
+                                        value="<?= $review['id'] ?>"
+                                >
+=======
                             <form action="handler.php" method="POST">
+>>>>>>> 3c93d50dbe13ac035c1c8d2c30148769611115be
                                 <button type="submit" name="delete">Удалить</button>
                             </form>
                         </td>
