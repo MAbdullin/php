@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Редактирование товара</title>
-    <link rel="stylesheet" href="/15_1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lessons/15_1/css/bootstrap.min.css">
     <base href="/lessons/15_1/">
 </head>
 <body>

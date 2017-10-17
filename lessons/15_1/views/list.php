@@ -6,9 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/15_1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lessons/15_1/css/bootstrap.min.css">
     <base href="/lessons/15_1/">
-</head>
+</head>git
 <body>
 <div class="container">
     <h1>Товары</h1>
@@ -53,16 +53,43 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-           <!-- форма для добавления товара-->
-            <form action="products/create" method="POST">
-                <input type="text" name="title" placeholder="Название">
-                <input type="text" name="description" placeholder="Описание">
-                <input type="number" name="price" placeholder="Цена">
-                <button type="submit">Создать</button>
+            <!-- форма для добавления товара-->
+            <!-- Кнопка, вызывающее модальное окно -->
+            <a href="#myModal" class="btn btn-primary" data-toggle="modal">Создать товар</a>
 
-            </form>
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Заголовок модального окна</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="products/create" method="POST">
+                                <input type="text" name="title" placeholder="Название">
+                                <input type="text" name="description" placeholder="Описание">
+                                <input type="number" name="price" placeholder="Цена">
+                                <button type="submit">Создать</button>
+                            </form>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
+
+
     <h1>Отзывы</h1>
     <div class="row">
         <div class="col-md-12">

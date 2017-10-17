@@ -9,15 +9,50 @@ class Router
     protected $action_pattern = "/(?P<entity>\w+)\/(?P<id>\d+)\/(?P<action>\w+)/";
     protected $create_pattern = "/(?P<entity>\w+)\/(?P<action>\w+)/";
     protected $matches = [];
+    protected $routes = [];
+
+    public function get($expression, $controller, $method = 'index')
+    {
+        //About Controlle
+        $controller = "Controllers\\$controller";
+        //Contreollers\AboutController
+        $this->routes['GET'][] = [
+            'expression' => $expression,
+            'controller' => new $controller,
+            'method' => $method,
+        ];
+
+    }
+
+    public function post($expression, $controller, $method = 'index')
+    {
+        //About Controlle
+        $controller = "Controllers\\$controller";
+        //Contreollers\AboutController
+        $this->routes['POST'][] = [
+            'expression' => $expression,
+            'controller' => new $controller,
+            'method' => $method,
+        ];
+
+    }
+
 
     public function execute()
     {
 
-        $url = $_SERVER['PATH_INFO'] ?? null;
+        $url = $_SERVER['PATH_INFO'] ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
 
+        foreach ($this->routes[$method] as $route) {
+            if (preg_match($route['expression'], $url, $this->matches)) {
+               $route['controller']->{$route['method']}($this->matches);
+               break;
+            }
+        }
 
-        if ($url === NULL || $url === '/') {
+
+        /*if ($url === NULL || $url === '/') {
             (new  IndexController())->index();
         } else if (preg_match($this->action_pattern, $url, $this->matches)) {
             $entity = $this->matches['entity'];
@@ -47,10 +82,10 @@ class Router
             }
 
         } else {
-           /*Показать ошибку*/
+
             print_r('Страница не найдена');
             die();
-        }
+        }*/
 
 
     }
