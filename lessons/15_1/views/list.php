@@ -1,14 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/lessons/15_1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <base href="/lessons/15_1/">
-</head>git
+</head>
 <body>
 <div class="container">
     <h1>Товары</h1>
@@ -53,39 +54,33 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-            <!-- форма для добавления товара-->
+
             <!-- Кнопка, вызывающее модальное окно -->
-            <a href="#myModal" class="btn btn-primary" data-toggle="modal">Создать товар</a>
+            <button href="#myModal1" class="btn btn-primary" data-toggle="modal">Добавить товар</button>
 
-
-            <div id="myModal" class="modal fade">
+            <!-- модальное окно-->
+            <div id="myModal1" class="modal fade">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title">Заголовок модального окна</h4>
+                            <h4 class="modal-title">Создание товара</h4>
                         </div>
-
                         <div class="modal-body">
+                            <!-- форма для добавления отзыва-->
                             <form action="products/create" method="POST">
                                 <input type="text" name="title" placeholder="Название">
                                 <input type="text" name="description" placeholder="Описание">
                                 <input type="number" name="price" placeholder="Цена">
                                 <button type="submit">Создать</button>
                             </form>
-
                         </div>
-
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
@@ -138,16 +133,37 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-            <!-- форма для добавления товара-->
-            <form action="reviews/create" method="POST">
-                <input type="text" name="name" placeholder="Имя">
-                <input type="number" name="phone" placeholder="Телефон">
-                <input type="text" name="text" placeholder="Сообщение">
-                <button type="submit">Создать</button>
 
-            </form>
+            <!-- ссылка для открытия модального окна-->
+            <button href="#myModal2" class="btn btn-primary" data-toggle="modal">Добавить отзыв</button>
+
+            <!-- модальное окно-->
+            <div id="myModal2" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Создание отзыва</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!-- форма для добавления отзыва-->
+                            <form action="reviews/create" method="POST">
+                                <input type="text" name="name" placeholder="Имя">
+                                <input type="number" name="phone" placeholder="Телефон">
+                                <input type="text" name="text" placeholder="Сообщение">
+                                <button type="submit">Создать</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
