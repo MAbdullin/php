@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 12 2017 г., 18:00
+-- Время создания: Окт 18 2017 г., 16:09
 -- Версия сервера: 10.1.25-MariaDB
--- Версия PHP: 7.0.21
+-- Версия PHP: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -71,6 +71,27 @@ INSERT INTO `reviews` (`id`, `name`, `phone`, `text`, `created_at`) VALUES
 (12, '1212', '48-56-22', 'Работаем круглосуточное', '2017-10-12 15:54:45'),
 (13, '13564543w', '48-56-22', 'Работаем круглосуточное', '2017-10-12 15:54:51');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `secondname` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `avatar` varchar(200) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `secondname`, `avatar`) VALUES
+(1, 'Марат', 'Абдуллин', ''),
+(2, 'Александр', 'Пушкин', '');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -88,6 +109,12 @@ ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -100,7 +127,12 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT для таблицы `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
